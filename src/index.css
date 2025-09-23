@@ -3,13 +3,11 @@
 /* ============================================= */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif; /* A nice, clean font for the whole site */
-  background-color: #fdfdff; /* A very light off-white for the whole page */
+  font-family: 'Poppins', sans-serif; /* A clean font for the whole site */
+  background-color: #fdfdff; /* A very light off-white for the page background */
 }
 
 
-/* ============================================= */
-/* ===== LOGIN PAGE STYLES ===== */
 /* ============================================= */
 /* ===== LOGIN PAGE STYLES ===== */
 /* ============================================= */
@@ -18,7 +16,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f7f9; /* Changed to a clean, light grey/off-white */
+  background-color: #f4f7f9; /* Clean, light grey/off-white background */
 }
 
 .login-box {
@@ -87,22 +85,6 @@ body {
   transform: translateY(-2px);
 }
 
-.extra-links {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-}
-
-.extra-links a {
-  color: #764ba2;
-  text-decoration: none;
-}
-
-.extra-links a:hover {
-  text-decoration: underline;
-}
-
 
 /* ============================================= */
 /* ===== HOMEPAGE STYLES ===== */
@@ -121,10 +103,10 @@ section {
 
 /* --- Hero Section (White Background) --- */
 .hero-section {
-  background-color: #ffffff; /* White background */
-  color: #333; /* Dark text */
+  background-color: #ffffff;
+  color: #333;
   padding: 80px 20px;
-  border-bottom: 1px solid #eee; /* Subtle separator line */
+  border-bottom: 1px solid #eee;
 }
 
 .hero-section h1 {
@@ -133,7 +115,7 @@ section {
 }
 
 .hero-section h1 .highlight {
-  color: #764ba2; /* Highlight the brand name */
+  color: #764ba2;
 }
 
 .hero-section .sub-line {
@@ -142,7 +124,7 @@ section {
   margin-bottom: 2rem;
 }
 
-/* --- Updated CTA Button Styles (for white background) --- */
+/* --- CTA Button Styles (for white background) --- */
 .hero-buttons {
   display: flex;
   justify-content: center;
@@ -157,7 +139,7 @@ section {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: #764ba2; /* Primary button has main color */
+  background-color: #764ba2;
   color: white;
   border: 2px solid #764ba2;
 }
@@ -168,13 +150,15 @@ section {
 }
 
 .cta-button.secondary {
-  background-color: #ffffff; /* Secondary button is white */
-  color: #764ba2; /* With colored text */
+  background-color: #ffffff;
+  color: #764ba2;
   border: 2px solid #764ba2;
 }
 
-/* --- Introduction Section --- */
-.intro-section h2 {
+/* --- Other Homepage Sections --- */
+.intro-section h2,
+.prompts-section h2,
+.features-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #764ba2;
@@ -183,66 +167,6 @@ section {
 .intro-section p {
   font-size: 1.1rem;
   line-height: 1.6;
-}
-
-/* --- Prompts Section --- */
-.prompts-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #764ba2;
-}
-
-.prompt-cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  text-align: left;
-}
-
-.prompt-card {
-  background: #f9f9f9;
-  border: 1px solid #eee;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.prompt-card h4 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-/* --- Features Section --- */
-.features-section {
-  background-color: #f7f5ff;
-}
-
-.features-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #764ba2;
-}
-
-.features-list {
-  list-style-type: none;
-  padding: 0;
-  font-size: 1.1rem;
-  text-align: left;
-  display: inline-block;
-}
-
-.features-list li {
-  margin-bottom: 15px;
-}
-
-/* --- Call-to-Action Section --- */
-.cta-section {
-  background-color: #4a3f73;
-  color: white;
-  font-size: 1.3rem;
-  font-weight: 500;
-  padding: 50px 20px;
 }
 
 
@@ -312,23 +236,102 @@ section {
 .course-card p {
   line-height: 1.6;
 }
+
+
+/* ============================================= */
+/* ===== FEATURE: RELATED BOOKS STYLES ===== */
+/* ============================================= */
+.toggle-books-button {
+  background-color: #f0eefc;
+  color: #5a3e9a;
+  border: 1px solid #dcd6f0;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.toggle-books-button:hover {
+  background-color: #e5dff7;
+  border-color: #c9c1e6;
+}
+
+.books-section {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  text-align: left;
+}
+
+.books-section h4 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.books-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.book-item:last-child {
+  border-bottom: none;
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-title {
+  font-weight: 600;
+  color: #444;
+}
+
+.book-author {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.buy-link {
+  background-color: #764ba2;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.buy-link:hover {
+  background-color: #613c85;
+}
+
+
 /* ============================================= */
 /* ===== MOBILE RESPONSIVE STYLES ===== */
-/* (Styles for screens 600px wide or smaller) */
+/* (For screens 600px wide or smaller) */
 /* ============================================= */
 @media (max-width: 600px) {
-
-  /* Make the main headline smaller on mobile */
   .hero-section h1 {
     font-size: 1.8rem;
   }
-
-  /* Adjust sub-line text size */
+  
   .hero-section .sub-line {
     font-size: 1rem;
   }
   
-  /* Reduce padding on sections to give more space */
   section {
     padding: 30px 15px;
   }
@@ -337,16 +340,9 @@ section {
     padding: 60px 15px;
   }
 
-  /* Make general section titles smaller */
   .intro-section h2,
   .prompts-section h2,
   .features-section h2 {
     font-size: 1.5rem;
-  }
-  
-  /* Stack the login/signup links on the login page */
-  .extra-links {
-      flex-direction: column;
-      gap: 15px;
   }
 }
