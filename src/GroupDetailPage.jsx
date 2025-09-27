@@ -33,12 +33,12 @@ const GroupDetailPage = () => {
         <Link to={`/uses/${groupId}`} className="cta-button">
           What is the use of this course?
         </Link>
-        {/* THIS IS THE CORRECTED LINK. It uses "Link to" to go to a new page inside your app. */}
+        {/* THIS IS THE CORRECTED LINK. It uses "Link to" to go to a new page inside your app.
         {hasVideos && (
           <Link to={`/videos/${groupId}`} className="cta-button secondary">
             View Class Videos
           </Link>
-        )}
+        )} */}
       </div>
 
       <button onClick={() => navigate(-1)} className="back-button">← Go Back</button>

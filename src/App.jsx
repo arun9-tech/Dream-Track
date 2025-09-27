@@ -7,7 +7,7 @@ import OptionsPage from './OptionsPage';
 import PathwayPage from './PathwayPage';
 import GroupDetailPage from './GroupDetailPage';
 import UsesPage from './UsesPage';
-import VideosPage from './VideosPage';
+// import VideosPage from './VideosPage';
 import JobNotificationsPage from './JobNotificationsPage'; // Import new page
 import Navbar from './Navbar'; // Import Navbar
 
@@ -40,7 +40,7 @@ function App() {
       <Route path="/pathway/:pathwayId" element={<ProtectedRoute><PathwayPage /></ProtectedRoute>} />
       <Route path="/group/:groupId" element={<ProtectedRoute><GroupDetailPage /></ProtectedRoute>} />
       <Route path="/uses/:groupId" element={<ProtectedRoute><UsesPage /></ProtectedRoute>} />
-      <Route path="/videos/:groupId" element={<ProtectedRoute><VideosPage /></ProtectedRoute>} />
+      {/* <Route path="/videos/:groupId" element={<ProtectedRoute><VideosPage /></ProtectedRoute>} /> */}
       {/* ADD THE NEW JOBS ROUTE */}
       <Route path="/jobs" element={<ProtectedRoute><JobNotificationsPage /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to={isLoggedIn ? "/home" : "/login"} />} />
