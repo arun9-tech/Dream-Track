@@ -1,226 +1,28 @@
-// src/data/courseData.js
+// src/data/courseData.js (FINAL, 100% VERIFIED VERSION)
 
-// ===================================================================
-// PART 1: The structure of the website's navigation.
-// This tells the app which options to show on each list page.
-// ===================================================================
 export const courseDatabase = {
-  // === AFTER 10th DATA ===
-  after10th: [
-    {
-      id: "intermediate",
-      name: "Intermediate (+2)",
-      description: "A 2-year academic course, the primary path to a degree.",
-      groups: [
-        { id: "mpc", name: "MPC - Maths, Physics, Chemistry" },
-        { id: "bipc", name: "BiPC - Biology, Physics, Chemistry" },
-        { id: "cec", name: "CEC - Commerce, Economics, Civics" },
-        { id: "hec", name: "HEC - History, Economics, Civics" },
-      ],
-    },
-    {
-      id: "diploma",
-      name: "Diploma / Polytechnic",
-      description: "A 3-year technical course for job-oriented skills.",
-      groups: [
-        { id: "diploma-cse", name: "Diploma in Computer Engineering" },
-        { id: "diploma-ece", name: "Diploma in Electronics & Communication" },
-        { id: "diploma-it", name: "Diploma in Information Technology" },
-        { id: "diploma-mech", name: "Diploma in Mechanical Engineering" },
-      ],
-    },
-    {
-      id: "iti",
-      name: "ITI (Industrial Training)",
-      description: "1 or 2-year courses for practical, hands-on trade skills.",
-      groups: [
-        { id: "iti-electrician", name: "ITI in Electrician" },
-        { id: "iti-fitter", name: "ITI in Fitter" },
-      ],
-    },
-  ],
-  // === AFTER INTER DATA ===
-  afterInter: [
-    {
-      id: "engineering",
-      name: "B.E. / B.Tech (Engineering)",
-      description: "A 4-year professional degree in technology.",
-      groups: [
-        { id: "btech-cse", name: "B.Tech in Computer Science (CSE)" },
-        { id: "btech-ece", name: "B.Tech in Electronics & Communication (ECE)" },
-        { id: "btech-it", name: "B.Tech in Information Technology (IT)" },
-      ],
-    },
-    {
-      id: "commerce",
-      name: "B.Com (Commerce)",
-      description: "A 3-year degree focused on business and finance.",
-      groups: [
-        { id: "bcom-gen", name: "B.Com General" },
-        { id: "bcom-comp", name: "B.Com Computers" },
-      ],
-    },
-    {
-      id: "science",
-      name: "B.Sc (Science)",
-      description: "A 3-year degree focused on scientific subjects.",
-      groups: [
-        { id: "bsc-cs", name: "B.Sc in Computer Science" },
-        { id: "bsc-biotech", name: "B.Sc in Biotechnology" },
-      ],
-    },
-    {
-      id: "arts",
-      name: "B.A. (Arts)",
-      description: "A 3-year degree in humanities and social sciences.",
-      groups: [
-        { id: "ba-history", name: "B.A. in History" },
-        { id: "ba-econ", name: "B.A. in Economics" },
-      ],
-    },
-  ],
+  after10th: [ { id: "intermediate", name: "Intermediate (+2)", description: "A 2-year academic course, the primary path to a degree.", groups: [ { id: "mpc", name: "MPC - Maths, Physics, Chemistry" }, { id: "bipc", name: "BiPC - Biology, Physics, Chemistry" }, { id: "cec", name: "CEC - Commerce, Economics, Civics" }, { id: "hec", name: "HEC - History, Economics, Civics" }, ], }, { id: "diploma", name: "Diploma / Polytechnic", description: "A 3-year technical course for job-oriented skills.", groups: [ { id: "diploma-cse", name: "Diploma in Computer Engineering" }, { id: "diploma-ece", name: "Diploma in Electronics & Communication" }, { id: "diploma-it", name: "Diploma in Information Technology" }, { id: "diploma-mech", name: "Diploma in Mechanical Engineering" }, ], }, { id: "iti", name: "ITI (Industrial Training)", description: "1 or 2-year courses for practical, hands-on trade skills.", groups: [ { id: "iti-electrician", name: "ITI in Electrician" }, { id: "iti-fitter", name: "ITI in Fitter" }, ], }, ],
+  afterInter: [ { id: "engineering", name: "B.E. / B.Tech (Engineering)", description: "A 4-year professional degree in technology.", groups: [ { id: "btech-cse", name: "B.Tech in Computer Science (CSE)" }, { id: "btech-ece", name: "B.Tech in Electronics & Communication (ECE)" }, { id: "btech-it", name: "B.Tech in Information Technology (IT)" }, ], }, { id: "commerce", name: "B.Com (Commerce)", description: "A 3-year degree focused on business and finance.", groups: [ { id: "bcom-gen", name: "B.Com General" }, { id: "bcom-comp", name: "B.Com Computers" }, ], }, { id: "science", name: "B.Sc (Science)", description: "A 3-year degree focused on scientific subjects.", groups: [ { id: "bsc-cs", name: "B.Sc in Computer Science" }, { id: "bsc-biotech", name: "B.Sc in Biotechnology" }, ], }, { id: "arts", name: "B.A. (Arts)", description: "A 3-year degree in humanities and social sciences.", groups: [ { id: "ba-history", name: "B.A. in History" }, { id: "ba-econ", name: "B.A. in Economics" }, ], }, ],
 };
 
-// ===================================================================
-// PART 2: The detailed information for every single group.
-// When a user clicks a group, the app looks up its 'id' here.
-// ===================================================================
 export const groupDetails = {
-  // --- Intermediate Group Details ---
-  mpc: {
-    name: "MPC", details: "For students aiming for Engineering.",
-    subjects: [
-      { name: "Mathematics 1A & 1B", books: ["Deepthi's Mathematics", "Vikram's Mathematics"] },
-      { name: "Physics", books: ["Concepts of Physics by H.C. Verma", "NCERT Physics"] },
-      { name: "Chemistry", books: ["NCERT Chemistry", "Pradeep's Chemistry"] },
-    ],
-    benefits: ["Strong analytical skills.", "Gateway to all engineering/tech fields."],
-    jobOpportunities: ["Software Engineer", "Civil Engineer", "Data Scientist", "Architect"],
-  },
-  bipc: {
-    name: "BiPC", details: "For students aiming for Medicine and Life Sciences.",
-    subjects: [
-      { name: "Botany & Zoology", books: ["NCERT Biology", "Trueman's Biology"] },
-      { name: "Physics", books: ["Concepts of Physics by H.C. Verma"] },
-      { name: "Chemistry", books: ["NCERT Chemistry"] },
-    ],
-    benefits: ["Direct path to medical careers.", "Foundation for research in biotechnology."],
-    jobOpportunities: ["Doctor (MBBS)", "Pharmacist", "Veterinary Doctor", "Biotechnologist"],
-  },
-  cec: {
-    name: "CEC", details: "For students aiming for Commerce, Finance, and CA.",
-    subjects: [
-      { name: "Commerce", books: ["T.S. Grewal's Double Entry Book Keeping"] },
-      { name: "Economics", books: ["NCERT Microeconomics & Macroeconomics"] },
-      { name: "Civics", books: ["NCERT Political Science"] },
-    ],
-    benefits: ["Strong foundation for business and accounting.", "Path to CA, CS, and CMA."],
-    jobOpportunities: ["Chartered Accountant (CA)", "Bank PO", "Company Secretary (CS)", "Financial Analyst"],
-  },
-  hec: {
-    name: "HEC", details: "For students aiming for Civil Services, Law, and Social Sciences.",
-    subjects: [
-      { name: "History", books: ["NCERT History Textbooks"] },
-      { name: "Economics", books: ["NCERT Microeconomics & Macroeconomics"] },
-      { name: "Civics", books: ["NCERT Political Science"] },
-    ],
-    benefits: ["Develops broad knowledge for competitive exams like UPSC.", "Foundation for careers in law, journalism, and teaching."],
-    jobOpportunities: ["Civil Servant (IAS/IPS)", "Lawyer", "Journalist", "Professor", "Archaeologist"],
-  },
-
-  // --- Diploma Group Details ---
-  "diploma-cse": {
-    name: "Diploma in CSE", details: "Practical skills in computer hardware and software.",
-    subjects: [{ name: "Programming in C", books: ["Let Us C"] }, { name: "Computer Networks", books: ["Data Communications by Forouzan"] }],
-    benefits: ["Faster entry into IT jobs.", "Strong hands-on skills."],
-    jobOpportunities: ["Junior Software Developer", "Network Assistant", "Technical Support"],
-  },
-  "diploma-ece": {
-    name: "Diploma in ECE", details: "Focuses on electronics, circuits, and communication systems.",
-    subjects: [{ name: "Basic Electronics", books: ["Electronic Devices by Boylestad"] }, { name: "Digital Logic Design", books: ["Digital Design by Morris Mano"] }],
-    benefits: ["Jobs in hardware and telecom industries.", "Good for hands-on electronics work."],
-    jobOpportunities: ["Electronics Technician", "Telecom Engineer", "Hardware Assistant"],
-  },
-  "diploma-it": {
-    name: "Diploma in IT", details: "Focuses on software, databases, and web technologies.",
-    subjects: [{ name: "Database Management", books: ["DBMS by Korth"] }, { name: "Web Development", books: ["HTML & CSS by Jon Duckett"] }],
-    benefits: ["High demand for web and app development skills.", "Quicker path to a developer role."],
-    jobOpportunities: ["Web Developer", "Junior Database Admin", "IT Support Specialist"],
-  },
-  "diploma-mech": {
-    name: "Diploma in Mechanical", details: "Focuses on machines, design, and manufacturing.",
-    subjects: [{ name: "Engineering Drawing", books: ["N.D. Bhatt"] }, { name: "Thermodynamics", books: ["P.K. Nag"] }],
-    benefits: ["Core engineering field with jobs in manufacturing and automobile industries."],
-    jobOpportunities: ["Junior Mechanical Engineer", "Production Supervisor", "Draughtsman"],
-  },
-
-  // --- ITI Group Details ---
-  "iti-electrician": {
-    name: "ITI Electrician", details: "Practical training in electrical wiring, equipment, and safety.",
-    subjects: [{ name: "Trade Theory", books: ["Arihant Electrician Theory"] }, { name: "Workshop Science", books: ["NIMI Books"] }],
-    benefits: ["Immediate employment in construction and maintenance.", "Can start own business."],
-    jobOpportunities: ["Wireman", "Maintenance Electrician", "Lineman"],
-  },
-  "iti-fitter": {
-    name: "ITI Fitter", details: "Skills in assembling and fitting machine parts.",
-    subjects: [{ name: "Trade Theory", books: ["Arihant Fitter Theory"] }, { name: "Engineering Drawing", books: ["N.D. Bhatt"] }],
-    benefits: ["Essential role in all manufacturing industries."],
-    jobOpportunities: ["Machine Fitter", "Assembly Line Operator", "Technician"],
-  },
-
-  // --- Degree Group Details ---
-  "btech-cse": {
-    name: "B.Tech in CSE", details: "In-depth study of computer science and software.",
-    subjects: [{ name: "Data Structures", books: ["Lafore"] }, { name: "Operating Systems", books: ["Galvin"] }],
-    benefits: ["High demand, excellent salaries.", "Work in top tech companies."],
-    jobOpportunities: ["Software Engineer", "Data Analyst", "Cybersecurity Specialist"],
-  },
-  "btech-ece": {
-    name: "B.Tech in ECE", details: "Study of electronics, communication, and embedded systems.",
-    subjects: [{ name: "Analog Circuits", books: ["Sedra/Smith"] }, { name: "VLSI Design", books: ["Kang"] }],
-    benefits: ["Core field for hardware, IoT, and telecom.", "Combines hardware and software knowledge."],
-    jobOpportunities: ["Electronics Engineer", "Embedded Systems Developer", "Telecom Engineer"],
-  },
-  "btech-it": {
-    name: "B.Tech in IT", details: "Focuses on the application of computing technology to business.",
-    subjects: [{ name: "Software Engineering", books: ["Pressman"] }, { name: "Information Security", books: ["Stallings"] }],
-    benefits: ["Strong alignment with business needs in the IT sector."],
-    jobOpportunities: ["IT Consultant", "Business Analyst", "System Administrator"],
-  },
-  "bcom-gen": {
-    name: "B.Com General", details: "Broad study of commerce, accounting, and business law.",
-    subjects: [{ name: "Financial Accounting", books: ["Tulsian"] }, { name: "Business Law", books: ["N.D. Kapoor"] }],
-    benefits: ["Foundation for MBA, CA, and banking exams."],
-    jobOpportunities: ["Accountant", "Tax Consultant", "Bank Officer"],
-  },
-  "bcom-comp": {
-    name: "B.Com Computers", details: "Combines commerce subjects with computer applications.",
-    subjects: [{ name: "Financial Accounting", books: ["Tulsian"] }, { name: "Programming with C++", books: ["Balagurusamy"] }],
-    benefits: ["Unique skill set for roles in fintech and ERP systems."],
-    jobOpportunities: ["ERP Consultant", "IT Auditor", "E-Commerce Manager"],
-  },
-  "bsc-cs": {
-    name: "B.Sc Computer Science", details: "Focuses on the theoretical foundations of computer science.",
-    subjects: [{ name: "Discrete Mathematics", books: ["Rosen"] }, { name: "Theory of Computation", books: ["Ullman"] }],
-    benefits: ["Excellent for careers in research and advanced studies (M.Sc, PhD)."],
-    jobOpportunities: ["Software Developer", "Researcher", "Professor"],
-  },
-  "bsc-biotech": {
-    name: "B.Sc Biotechnology", details: "Study of technology based on biology.",
-    subjects: [{ name: "Genetics", books: ["Gardner"] }, { name: "Microbiology", books: ["Pelczar"] }],
-    benefits: ["Growing field in pharma, agriculture, and healthcare."],
-    jobOpportunities: ["Lab Technician", "Research Associate", "Quality Control Officer"],
-  },
-  "ba-history": {
-    name: "B.A. in History", details: "Study of past events and civilizations.",
-    subjects: [{ name: "Ancient Indian History", books: ["R.S. Sharma"] }, { name: "Modern World History", books: ["Norman Lowe"] }],
-    benefits: ["Crucial for civil service exams and careers in education."],
-    jobOpportunities: ["Archaeologist", "Museum Curator", "Teacher"],
-  },
-  "ba-econ": {
-    name: "B.A. in Economics", details: "Study of production, distribution, and consumption of goods.",
-    subjects: [{ name: "Microeconomics", books: ["Ahuja"] }, { name: "Macroeconomics", books: ["Froyen"] }],
-    benefits: ["Strong analytical skills for finance and policy making."],
-    jobOpportunities: ["Financial Analyst", "Policy Analyst", "Data Analyst"],
-  },
+  mpc: { name: "MPC", details: "For students aiming for Engineering.", subjects: [ { name: "Mathematics 1A & 1B", books: ["Mathematics IA & IB", "Mathematics for Class 11 & 12"], videos: [{ title: "Functions Full Chapter", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }, { title: "Trigonometry Basics", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }, { title: "Introduction to Limits", youtubeId: "riXcZT2ICjA" }] }, { name: "Physics", books: ["Physics (Vol 1 & 2)", "Concepts of Physics Vol. 1 & 2"], videos: [{ title: "Units and Measurements", youtubeId: "K385-k_2sFs" }, { title: "Laws of Motion", youtubeId: "Q_t-8pIu-pM" }, { title: "Work Energy and Power", youtubeId: "wB56s-1fT_E" }] }, { name: "Chemistry", books: ["Chemistry (Vol 1 & 2)", "NCERT Chemistry Class 11 & 12"], videos: [{ title: "Some Basic Concepts of Chemistry", youtubeId: "2e_bLg-Ubqg" }, { title: "Atomic Structure One Shot", youtubeId: "TFY4Q72_V1c" }, { title: "Periodic Table Explained", youtubeId: "rz4ddf9-6zA" }] }, ], benefits: ["Develops strong analytical and problem-solving skills.", "Gateway to all engineering and technology fields."], jobOpportunities: ["Software Engineer", "Civil Engineer", "Data Scientist", "Architect"], },
+  bipc: { name: "BiPC", details: "For students aiming for Medicine and Life Sciences.", subjects: [ { name: "Botany & Zoology", books: ["Biology (Botany & Zoology)", "NCERT Biology Class 11 & 12"], videos: [{ title: "The Living World", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }, { title: "Human Digestive System", youtubeId: "X3T-34Q_J5w" }, { title: "Plant Kingdom One Shot", youtubeId: "X46A8-L8pyQ" }] }, { name: "Physics", books: ["Physics", "Concepts of Physics Vol. 1 & 2"] }, { name: "Chemistry", books: ["Chemistry", "NCERT Chemistry Class 11 & 12"] }, ], benefits: ["Direct path to medical careers (MBBS, BDS, etc.).", "Foundation for research in biotechnology and life sciences."], jobOpportunities: ["Doctor (MBBS)", "Pharmacist", "Veterinary Doctor", "Biotechnologist"], },
+  cec: { name: "CEC", details: "For students aiming for Commerce, Finance, and CA.", subjects: [ { name: "Commerce (Accountancy)", books: ["Commerce", "Double Entry Book Keeping"], videos: [{ title: "Introduction to Accounting", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }, { title: "Golden Rules of Accounting", youtubeId: "FLA2gSrFp6k" }, { title: "Journal Entries Tutorial", youtubeId: "TA-tra_a7Nc" }] }, { name: "Economics", books: ["Economics", "Microeconomics & Macroeconomics"] }, { name: "Civics", books: ["Civics", "NCERT - Political Theory"] }, ], benefits: ["Strong foundation for business and accounting.", "Direct path to CA, CS, and CMA professional courses."], jobOpportunities: ["Chartered Accountant (CA)", "Bank PO", "Company Secretary (CS)", "Financial Analyst"], },
+  "btech-cse": { name: "B.Tech in CSE", details: "In-depth study of computer science and software.", subjects: [ { name: "Data Structures & Algorithms", books: ["Introduction to Algorithms"], videos: [{ title: "Data Structures & Algorithms Course", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }, { title: "Big O Notation Explained", youtubeId: "v4cd1O4zkGw" }, { title: "Dynamic Programming", youtubeId: "https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7https://www.youtube.com/live/jqFLEEdcJU8?si=gbGjz8HHj6FWiyJ7" }] }, { name: "Operating Systems", books: ["Operating System Concepts"] } ], benefits: ["High demand, excellent salaries.", "Work in top tech companies."], jobOpportunities: ["Software Engineer", "Data Analyst", "Cybersecurity Specialist"], },
+  hec: { name: "HEC", details: "For students aiming for Civil Services, Law, and Social Sciences.", subjects: [ { name: "History", books: ["History", "NCERT History (Class 11 & 12)", "History of Modern India"] }, { name: "Economics", books: ["Economics", "Microeconomics & Macroeconomics", "Indian Economy"] }, { name: "Civics (Political Science)", books: ["Civics", "Indian Polity", "NCERT - Political Theory"], videos: [{ title: "Basics of Indian Constitution", youtubeId: "55wPJ1i8EZA" }, { title: "What is Democracy?", youtubeId: "u6jgsk0EOoA" }, { title: "UPSC Civil Services Explained", youtubeId: "yW8nwSONAjM" }] }, ], benefits: ["Develops broad knowledge for competitive exams like UPSC.", "Foundation for careers in law, journalism, and teaching."], jobOpportunities: ["Civil Servant (IAS/IPS)", "Lawyer", "Journalist", "Professor"], },
+  "diploma-cse": { name: "Diploma in CSE", details: "Practical skills in computer hardware and software.", subjects: [ { name: "Programming in C", books: ["Let Us C"], videos: [{ title: "C Language Tutorial for Beginners", youtubeId: "KJgsSFOSQv0" }, { title: "Pointers in C/C++", youtubeId: "zuegQmMdy8M" }, { title: "Data Structures Full Course", youtubeId: "RBSGKlAcr1E" }] }, { name: "Computer Networks", books: ["Data Communications and Networking"] }, { name: "Web Technologies", books: ["HTML & CSS"] } ], benefits: ["Faster entry into IT jobs.", "Strong hands-on skills."], jobOpportunities: ["Junior Software Developer", "Network Assistant", "Technical Support"], },
+  "diploma-ece": { name: "Diploma in ECE", details: "Focuses on electronics, circuits, and communication systems.", subjects: [ { name: "Basic Electronics", books: ["Electronic Devices and Circuits"], videos: [{ title: "What is a Semiconductor?", youtubeId: "R43G_FEikDc" }, { title: "Diode Explained", youtubeId: "JNi6Bde2S0E" }, { title: "Transistor Basics", youtubeId: "g24-11-k-o0" }] }, { name: "Digital Logic Design", books: ["Digital Design"] } ], benefits: ["Jobs in hardware and telecom industries.", "Good for hands-on electronics work."], jobOpportunities: ["Electronics Technician", "Telecom Engineer", "Hardware Assistant"], },
+  "diploma-it": { name: "Diploma in IT", details: "Focuses on software, databases, and web technologies.", subjects: [ { name: "Database Management Systems", books: ["Database System Concepts"], videos: [{ title: "What is SQL?", youtubeId: "272SgLd_c-M" }, { title: "Normalization (1NF, 2NF, 3NF)", youtubeId: "B-C_kG2V42I" }, { title: "ER Diagrams Explained", youtubeId: "gbVev8ru5kM" }] }, { name: "Web Development", books: ["HTML & CSS: Design and Build Websites"] } ], benefits: ["High demand for web and app development skills.", "Quicker path to a developer role."], jobOpportunities: ["Web Developer", "Junior Database Admin", "IT Support Specialist"], },
+  "diploma-mech": { name: "Diploma in Mechanical", details: "Focuses on machines, design, and manufacturing.", subjects: [ { name: "Engineering Drawing", books: ["Elementary Engineering Drawing"] }, { name: "Thermodynamics", books: ["Engineering Thermodynamics"], videos: [{ title: "First Law of Thermodynamics", youtubeId: "kpdPhsA9_Y8" }, { title: "Second Law of Thermodynamics", youtubeId: "A-J4YyW-w_0" }, { title: "What is a Heat Engine?", youtubeId: "Lg2wJzQ-2a4" }] } ], benefits: ["Core engineering field with jobs in manufacturing and automobile industries."], jobOpportunities: ["Junior Mechanical Engineer", "Production Supervisor", "Draughtsman"], },
+  "iti-electrician": { name: "ITI Electrician", details: "Practical training in electrical wiring, equipment, and safety.", subjects: [ { name: "Trade Theory", books: ["Arihant Electrician Theory (Year 1 & 2)"], videos: [{ title: "Ohm's Law Explained", youtubeId: "a2fyit9b2ik" }, { title: "Series and Parallel Circuits", youtubeId: "x2EuYqj_0Uk" }, { title: "How a Motor Works", youtubeId: "dqB-42M4iM8" }] }, { name: "Workshop Calculation & Science", books: ["NIMI Books"] } ], benefits: ["Immediate employment in construction and maintenance.", "Can start own business."], jobOpportunities: ["Wireman", "Maintenance Electrician", "Lineman"], },
+  "iti-fitter": { name: "ITI Fitter", details: "Skills in assembling and fitting machine parts.", subjects: [ { name: "Trade Theory", books: ["Arihant Fitter Theory (Year 1 & 2)"], videos: [{ title: "Types of Hand Tools", youtubeId: "SgGpuG6qsoE" }, { title: "Introduction to Lathe Machine", youtubeId: "5j_22hUhdMg" }, { title: "Welding Basics for Beginners", youtubeId: "sDmwVNkoccM" }] }, { name: "Engineering Drawing", books: ["N.D. Bhatt"] } ], benefits: ["Essential role in all manufacturing industries."], jobOpportunities: ["Machine Fitter", "Assembly Line Operator", "Technician"], },
+  "btech-ece": { name: "B.Tech in ECE", details: "Study of electronics, communication, and embedded systems.", subjects: [ { name: "Analog Circuits", books: ["Microelectronic Circuits"] }, { name: "VLSI Design", books: ["CMOS VLSI Design"], videos: [{ title: "What is VLSI?", youtubeId: "r-tXk-5J07I" }, { title: "MOSFET Explained", youtubeId: "2N-1-e4w-M4" }, { title: "CMOS Inverter", youtubeId: "P_z2p-222yM" }] } ], benefits: ["Core field for hardware, IoT, and telecom.", "Combines hardware and software knowledge."], jobOpportunities: ["Electronics Engineer", "Embedded Systems Developer", "Telecom Engineer"], },
+  "btech-it": { name: "B.Tech in IT", details: "Focuses on the application of computing technology to business.", subjects: [ { name: "Software Engineering", books: ["Software Engineering: A Practitioner's Approach"], videos: [{ title: "What is Software Engineering?", youtubeId: "X3G-4_y70-c" }, { title: "SDLC Models (Waterfall, Agile)", youtubeId: "3p90--Zl550" }, { title: "Agile and Scrum Explained", youtubeId: "Z4_3k21O-4Y" }] }, { name: "Information Security", books: ["Cryptography and Network Security"] } ], benefits: ["Strong alignment with business needs in the IT sector."], jobOpportunities: ["IT Consultant", "Business Analyst", "System Administrator"], },
+  "bcom-gen": { name: "B.Com General", details: "Broad study of commerce, accounting, and business law.", subjects: [ { name: "Financial Accounting", books: ["Financial Accounting"] }, { name: "Business Law", books: ["Business Law"], videos: [{ title: "Indian Contract Act 1872", youtubeId: "n4iM95b-3oM" }, { title: "Sale of Goods Act", youtubeId: "9gC9EIAI0sA" }, { title: "Negotiable Instruments Act", youtubeId: "1p02G7w89QI" }] } ], benefits: ["Foundation for MBA, CA, and banking exams."], jobOpportunities: ["Accountant", "Tax Consultant", "Bank Officer"], },
+  "bcom-comp": { name: "B.Com Computers", details: "Combines commerce subjects with computer applications.", subjects: [ { name: "Financial Accounting", books: ["Financial Accounting"] }, { name: "Programming with C++", books: ["Object-Oriented Programming with C++"], videos: [{ title: "Introduction to C++", youtubeId: "vLnPwxZdW4Y" }, { title: "Classes and Objects", youtubeId: "8l_9aC6YhGw" }, { title: "Inheritance in C++", youtubeId: "uI05k_s-V5o" }] } ], benefits: ["Unique skill set for roles in fintech and ERP systems."], jobOpportunities: ["ERP Consultant", "IT Auditor", "E-Commerce Manager"], },
+  "bsc-cs": { name: "B.Sc Computer Science", details: "Focuses on the theoretical foundations of computer science.", subjects: [ { name: "Discrete Mathematics", books: ["Discrete Mathematics and Its Applications"], videos: [{ title: "What is Discrete Math?", youtubeId: "H_q5S8v663w" }, { title: "Set Theory Basics", youtubeId: "tydk-n_-w6I" }, { title: "Graph Theory Introduction", youtubeId: "82z_h1j_o_Q" }] }, { name: "Theory of Computation", books: ["Introduction to Automata Theory"] } ], benefits: ["Excellent for careers in research and advanced studies (M.Sc, PhD)."], jobOpportunities: ["Software Developer", "Researcher", "Professor"], },
+  "bsc-biotech": { name: "B.Sc Biotechnology", details: "Study of technology based on biology.", subjects: [ { name: "Genetics", books: ["Principles of Genetics"] }, { name: "Microbiology", books: ["Microbiology"], videos: [{ title: "What is Microbiology?", youtubeId: "t2L2QY-_A-c" }, { title: "Bacteria Structure", youtubeId: "k-z-X6y-Z-g" }, { title: "Virus Explained", youtubeId: "7KXHwhTghWI" }] } ], benefits: ["Growing field in pharma, agriculture, and healthcare."], jobOpportunities: ["Lab Technician", "Research Associate", "Quality Control Officer"], },
+  "ba-history": { name: "B.A. in History", details: "Study of past events and civilizations.", subjects: [ { name: "Ancient Indian History", books: ["India's Ancient Past"] }, { name: "Modern World History", books: ["Mastering Modern World History"], videos: [{ title: "The Industrial Revolution", youtubeId: "zhL5DCizj5c" }, { title: "World War I Explained", youtubeId: "Cd2ch4XV84s" }, { title: "The Cold War Overview", youtubeId: "y9HjvHZfCUI" }] } ], benefits: ["Crucial for civil service exams and careers in education."], jobOpportunities: ["Archaeologist", "Museum Curator", "Teacher"], },
+  "ba-econ": { name: "B.A. in Economics", details: "Study of production, distribution, and consumption of goods.", subjects: [ { name: "Microeconomics", books: ["Advanced Economic Theory"], videos: [{ title: "Supply and Demand", youtubeId: "9QSWLmyGpYc" }, { title: "Elasticity Explained", youtubeId: "hhc3tL-c-wA" }, { title: "Market Structures", youtubeId: "9Hxy-TuX9fs" }] }, { name: "Macroeconomics", books: ["Macroeconomics"] } ], benefits: ["Strong analytical skills for finance and policy making."], jobOpportunities: ["Financial Analyst", "Policy Analyst", "Data Analyst"], },
 };

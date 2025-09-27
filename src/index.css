@@ -1,176 +1,48 @@
-/* ============================================= */
-/* ===== GLOBAL & GENERAL STYLES ===== */
-/* ============================================= */
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #f4f7f9; /* Consistent light background */
-}
+/* Global Styles */
+body { margin: 0; font-family: 'Poppins', sans-serif; background-color: #f4f7f9; padding-top: 70px; /* Add padding to prevent content from hiding behind fixed navbar */ }
+.page-container { max-width: 900px; margin: 0 auto; padding: 20px; }
+.page-title { text-align: center; color: #333; margin-bottom: 30px; font-size: 2.2rem; }
+.page-description { text-align: center; color: #555; margin-top: -20px; margin-bottom: 40px; font-size: 1.1rem; }
+.back-button { display: block; width: fit-content; margin: 40px auto 0; background: #fff; border: 1px solid #ddd; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; text-decoration: none; color: #555; font-size: 0.9rem; transition: all 0.2s ease; }
+.back-button:hover { background-color: #f1f1f1; border-color: #ccc; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
-.page-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* NEW NAVBAR STYLES */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 0 40px; height: 60px; background-color: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: fixed; top: 0; left: 0; right: 0; z-index: 1000; }
+.nav-logo { font-size: 1.5rem; font-weight: 700; color: #764ba2; text-decoration: none; }
+.nav-links { display: flex; align-items: center; gap: 20px; }
+.nav-link { text-decoration: none; color: #555; font-weight: 500; padding: 5px 10px; border-radius: 6px; transition: all 0.2s ease; }
+.nav-link:hover, .nav-link.active { background-color: #f0eefc; color: #764ba2; }
+.nav-logout-btn { background: #764ba2; color: white; border: none; padding: 8px 15px; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background-color 0.2s; }
+.nav-logout-btn:hover { background-color: #613c85; }
 
-.page-title {
-  text-align: center;
-  color: #333;
-  margin-bottom: 30px;
-  font-size: 2.2rem;
-}
+/* Simple Login Page Styles */
+.login-container { display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #f4f7f9; padding-top: 0; /* Override body padding */ }
+.login-box { background: #ffffff; padding: 40px 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); width: 100%; max-width: 400px; text-align: center; }
+/* ... (Other login styles) ... */
+.login-box h2 { margin-bottom: 10px; font-size: 24px; color: #333; } .login-box p { margin-bottom: 30px; color: #777; } .input-group { margin-bottom: 20px; text-align: left; } .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; } .input-group input { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s; } .input-group input:focus { outline: none; border-color: #764ba2; } .login-button { width: 100%; padding: 12px; background: #764ba2; border: none; border-radius: 8px; color: white; font-size: 16px; font-weight: 700; cursor: pointer; transition: background-color 0.3s, transform 0.2s; } .login-button:hover { background-color: #66438f; transform: translateY(-2px); }
 
-.page-description {
-  text-align: center;
-  color: #555;
-  margin-top: -20px;
-  margin-bottom: 40px;
-  font-size: 1.1rem;
-}
+/* Homepage & List Page Styles */
+.hero-section { background-color: #ffffff; padding: 60px 20px; text-align: center; border-bottom: 1px solid #eee; }
+.hero-section h1 { font-size: 2.5rem; margin: 0; } .hero-section .sub-line { font-size: 1.2rem; opacity: 0.9; } .choice-container { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 40px; } .choice-card { background: #fff; padding: 30px; border-radius: 12px; text-align: center; text-decoration: none; color: #333; box-shadow: 0 5px 15px rgba(0,0,0,0.07); border: 1px solid #e5e5e5; transition: all 0.3s ease; } .choice-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-color: #764ba2; } .choice-card h2 { margin-top: 0; color: #764ba2; } .list-container { display: grid; gap: 20px; } .list-item-card { background: #fff; padding: 25px; border-radius: 10px; text-decoration: none; color: #333; border: 1px solid #e0e0e0; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: all 0.2s ease-in-out; } .list-item-card:hover { transform: translateX(5px); border-left: 5px solid #764ba2; } .list-item-card h3 { margin: 0 0 5px 0; color: #764ba2; } .list-item-card p { margin: 0; color: #666; }
 
-.back-button {
-  display: block;
-  width: fit-content;
-  margin: 40px auto 0;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 10px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: none;
-  color: #555;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-}
-
-.back-button:hover {
-  background-color: #f1f1f1;
-  border-color: #ccc;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-
-/* ============================================= */
-/* ===== LOGIN PAGE STYLES ===== */
-/* ============================================= */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-}
-.login-box {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-.login-box h2 { margin-bottom: 10px; font-size: 24px; color: #333; }
-.login-box p { margin-bottom: 30px; color: #777; }
-.input-group { margin-bottom: 20px; text-align: left; }
-.input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #555; }
-.input-group input { width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; transition: border-color 0.3s; }
-.input-group input:focus { outline: none; border-color: #764ba2; }
-.login-button { width: 100%; padding: 12px; background: #764ba2; border: none; border-radius: 8px; color: white; font-size: 16px; font-weight: 700; cursor: pointer; transition: background-color 0.3s, transform 0.2s; }
-.login-button:hover { background-color: #66438f; transform: translateY(-2px); }
-
-
-/* ============================================= */
-/* ===== HOMEPAGE STYLES (CHOICE CARDS) ===== */
-/* ============================================= */
-.hero-section {
-  background-color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 1px solid #eee;
-}
-.hero-section h1 { font-size: 2.5rem; margin: 0; }
-.hero-section .sub-line { font-size: 1.2rem; opacity: 0.9; }
-
-.choice-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
-}
-.choice-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.07);
-  border: 1px solid #e5e5e5;
-  transition: all 0.3s ease;
-}
-.choice-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  border-color: #764ba2;
-}
-.choice-card h2 { margin-top: 0; color: #764ba2; }
-
-
-/* ============================================= */
-/* ===== OPTIONS/PATHWAY LIST STYLES ===== */
-/* ============================================= */
-.list-container {
-  display: grid;
-  gap: 20px;
-}
-.list-item-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: all 0.2s ease-in-out;
-}
-.list-item-card:hover {
-  transform: translateX(5px);
-  border-left: 5px solid #764ba2;
-}
-.list-item-card h3 { margin: 0 0 5px 0; color: #764ba2; }
-.list-item-card p { margin: 0; color: #666; }
-
-
-/* ============================================= */
-/* ===== GROUP DETAIL & USES PAGE STYLES ===== */
-/* ============================================= */
-.detail-section { margin-bottom: 40px; text-align: left; }
+/* Group Detail, Uses, Videos & Job Pages Styles */
+.detail-section, .job-listings-container { margin-bottom: 40px; text-align: left; }
 .detail-section h2 { font-size: 1.8rem; color: #333; margin-bottom: 20px; border-left: 4px solid #764ba2; padding-left: 15px; }
+.subjects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; } .subject-card { background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #eee; } .subject-card h4 { margin-top: 0; margin-bottom: 10px; color: #764ba2; } .subject-card ul { padding-left: 20px; margin: 0; color: #555; }
+.action-section { display: flex; flex-direction: column; align-items: center; gap: 15px; margin: 40px 0; }
+.cta-button { display: inline-block; text-decoration: none; padding: 12px 30px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; background-color: #764ba2; color: white; border: 2px solid #764ba2; width: 300px; text-align: center; } .cta-button:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); } .cta-button.secondary { background-color: #fff; color: #764ba2; }
+.benefits-list { list-style: '✔ '; padding-left: 20px; font-size: 1.1rem; line-height: 1.8; } .benefits-list li { margin-bottom: 10px; }
+.job-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; } .job-list li { background: #f0eefc; color: #5a3e9a; padding: 8px 15px; border-radius: 20px; font-weight: 500; font-size: 0.9rem; }
+.videos-grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; } .video-item { margin-bottom: 20px; } .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); } .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; } .video-title { font-size: 0.9rem; font-weight: 500; text-align: center; margin-top: 8px; color: #666; }
+.job-card { background: #fff; border: 1px solid #eee; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); } .job-card h3 { margin: 0 0 5px 0; color: #764ba2; } .job-company { font-weight: 600; color: #333; } .job-company span { font-weight: 400; color: #777; } .job-description { color: #555; line-height: 1.6; } .apply-button { display: inline-block; margin-top: 15px; background-color: #28a745; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; }
 
-.subjects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.subject-card { background: #ffffff; border-radius: 8px; padding: 20px; border: 1px solid #eee; }
-.subject-card h4 { margin-top: 0; margin-bottom: 10px; color: #764ba2; }
-.subject-card ul { padding-left: 20px; margin: 0; color: #555; }
-
-.action-section { text-align: center; margin: 40px 0; }
-.cta-button.large { padding: 15px 40px; font-size: 1.2rem; }
-.cta-button { display: inline-block; text-decoration: none; padding: 12px 25px; font-size: 1rem; font-weight: 600; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; background-color: #764ba2; color: white; border: 2px solid #764ba2; }
-.cta-button:hover { transform: translateY(-3px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); }
-
-.benefits-list { list-style: '✔ '; padding-left: 20px; font-size: 1.1rem; line-height: 1.8; }
-.benefits-list li { margin-bottom: 10px; }
-
-.job-list { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
-.job-list li { background: #f0eefc; color: #5a3e9a; padding: 8px 15px; border-radius: 20px; font-weight: 500; font-size: 0.9rem; }
-
-
-/* ============================================= */
-/* ===== MOBILE RESPONSIVE STYLES ===== */
-/* ============================================= */
-@media (max-width: 600px) {
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  body { padding-top: 100px; } /* Adjust padding for two-line navbar */
+  .navbar { flex-direction: column; height: auto; padding: 10px 20px; } .nav-links { margin-top: 10px; }
   .hero-section h1 { font-size: 1.8rem; }
-  .hero-section .sub-line { font-size: 1rem; }
   .choice-container { grid-template-columns: 1fr; }
   .page-title { font-size: 1.8rem; }
   .detail-section h2 { font-size: 1.5rem; }
+  .cta-button { width: 90%; }
 }

@@ -6,12 +6,10 @@ const LoginPage = ({ onLoginSuccess }) => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-
     if (!email || !password) {
       alert('Please enter both email and password.');
       return;
     }
-
     console.log('Login successful for:', email);
     onLoginSuccess();
   };
@@ -27,10 +25,9 @@ const LoginPage = ({ onLoginSuccess }) => {
             <input
               type="email"
               id="email"
-              placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
+              required 
             />
           </div>
           <div className="input-group">
@@ -38,7 +35,6 @@ const LoginPage = ({ onLoginSuccess }) => {
             <input
               type="password"
               id="password"
-              placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -48,14 +44,6 @@ const LoginPage = ({ onLoginSuccess }) => {
             Login
           </button>
         </form>
-        
-        {/* --- THIS SECTION HAS BEEN REMOVED --- */}
-        {/*
-        <div className="extra-links">
-          <a href="#">Forgot Password?</a>
-          <a href="#">Don't have an account? Sign Up</a>
-        </div>
-        */}
       </div>
     </div>
   );

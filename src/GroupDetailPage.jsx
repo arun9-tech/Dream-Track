@@ -1,4 +1,3 @@
-// src/GroupDetailPage.jsx
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { groupDetails } from './data/courseData';
@@ -9,6 +8,9 @@ const GroupDetailPage = () => {
   const details = groupDetails[groupId];
 
   if (!details) return <div>Details not found</div>;
+
+  // This checks if there are any videos at all for this course
+  const hasVideos = details.subjects.some(subject => subject.videos && subject.videos.length > 0);
 
   return (
     <div className="page-container">
@@ -28,10 +30,17 @@ const GroupDetailPage = () => {
       </div>
 
       <div className="action-section">
-        <Link to={`/uses/${groupId}`} className="cta-button large">
+        <Link to={`/uses/${groupId}`} className="cta-button">
           What is the use of this course?
         </Link>
+        {/* THIS IS THE CORRECTED LINK. It uses "Link to" to go to a new page inside your app. */}
+        {hasVideos && (
+          <Link to={`/videos/${groupId}`} className="cta-button secondary">
+            View Class Videos
+          </Link>
+        )}
       </div>
+
       <button onClick={() => navigate(-1)} className="back-button">← Go Back</button>
     </div>
   );
